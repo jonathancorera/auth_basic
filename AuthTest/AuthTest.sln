@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthTest", "AuthTest.csproj", "{3F829DBD-B895-4C48-BEBC-FC7BF3DB513A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{7144ABC5-72D0-400C-91ED-F27A92FE5CD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F829DBD-B895-4C48-BEBC-FC7BF3DB513A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F829DBD-B895-4C48-BEBC-FC7BF3DB513A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F829DBD-B895-4C48-BEBC-FC7BF3DB513A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F829DBD-B895-4C48-BEBC-FC7BF3DB513A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7144ABC5-72D0-400C-91ED-F27A92FE5CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7144ABC5-72D0-400C-91ED-F27A92FE5CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7144ABC5-72D0-400C-91ED-F27A92FE5CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7144ABC5-72D0-400C-91ED-F27A92FE5CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6220CC39-6032-4AB9-A818-F68CDB7A7582}
+	EndGlobalSection
+EndGlobal
