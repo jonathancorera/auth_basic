@@ -23,7 +23,6 @@ namespace AuthTest.Controllers
 
 
         [HttpGet]
-
         public async Task<IActionResult> List ()
         {
            var coffeeshops =  await _coffeeShopService.GetAll();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gPciiIKAwyfXbqKId5lRrLx8xeGWHT+FmZBSgQeMa3G2vWDc00HvXIekkUHbzyvjr0amcx/PYJd2mNM6QeY89w==",
+  "dgSpecHash": "/arO7BEMsDN9NvdJ045D9ewhpEFV1fJ6iRnN0h4zLFS7K40FoEzZ//o15KrASPqWHHIJ/ohRh67z47OvxM8VUw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jonat\\source\\repos\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jonat\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

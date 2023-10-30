@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W/4RVSCWRnvJ8D6Z56AeH2KnKKX/atWA7ivnrfmFr8tkxhMwZAVoF0w//vNALMtw+dg1CqHTH0cBYUV7X1JLZg==",
+  "dgSpecHash": "WwETgRbftx/LcIQUPhsAhPeY9274qii1UlhaHFKEckgMlkfhcNZJBxjBozP0PTyXhWjVzCMThpK/53o061fUbg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jonat\\source\\repos\\AuthTest\\AuthTest.csproj",
+  "projectFilePath": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\AuthTest\\AuthTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jonat\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

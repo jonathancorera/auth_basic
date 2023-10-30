@@ -23,7 +23,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddIdentity<ApplicationUser, ApplicationUserRole>(options =>
 {
 
-}).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+})
+    .AddRoles<ApplicationUserRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -97,8 +99,43 @@ if (app.Environment.IsDevelopment())
 
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
+    //seed roles
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<ApplicationUserRole>>();
+
+    var roles = new[]
+    {
+        "Admin",
+        "User"
+    };
+
+    foreach(var role in roles)
+    {
+        if(! await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new ApplicationUserRole(role));
+        }
+    }
+
+
+    //seed admin
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+    if(await userManager.FindByEmailAsync("admin@mexxar.com") == null)
+    {
+        var user = new ApplicationUser();
+        user.Email = "admin@mexxar.com";
+        user.UserName = "admin@mexxar.com";
+        user.FirstName = "Mexxar";
+        user.LastName = "Admin";
+
+        await userManager.CreateAsync(user, "Thot4hm!");
+        await userManager.AddToRoleAsync(user, "Admin");
+    }
+
+
+    //enable automatic db updates on startup
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     dbContext.Database.Migrate();
 }
 

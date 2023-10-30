@@ -6,9 +6,11 @@ namespace AuthTest.Services
 {
     public interface IAuthService
     {
-        string GenerateTokenString(ApplicationUser user);
+        Task<string> GenerateTokenString(ApplicationUser user);
         Task<ApplicationUser> Login(LoginRequestDto user);
         Task<bool> RegisterUser(UserCreationDto user);
+
+        
 
     }
 }

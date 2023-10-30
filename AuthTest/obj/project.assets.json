@@ -3688,11 +3688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonat\\source\\repos\\AuthTest\\AuthTest.csproj",
+      "projectUniqueName": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\AuthTest\\AuthTest.csproj",
       "projectName": "AuthTest",
-      "projectPath": "C:\\Users\\jonat\\source\\repos\\AuthTest\\AuthTest.csproj",
+      "projectPath": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\AuthTest\\AuthTest.csproj",
       "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonat\\source\\repos\\AuthTest\\obj\\",
+      "outputPath": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\AuthTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jonat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3709,8 +3709,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jonat\\source\\repos\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\jonat\\source\\repos\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\jonat\\source\\repos\\Auth Basic\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\DataAccess\\DataAccess.csproj"
             }
           }
         }

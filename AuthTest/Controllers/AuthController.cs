@@ -2,6 +2,7 @@
 using AuthTest.Dtos.Users;
 using AuthTest.Services;
 using DataAccess.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -42,7 +43,7 @@ namespace AuthTest.Controllers
                     {
                         Id = result.Id,
                        Email = result.Email,
-                       Jwt = _authService.GenerateTokenString(result),
+                       Jwt = await _authService.GenerateTokenString(result),
                        FirstName = result.FirstName,
                        LastName = result.LastName,
 
@@ -63,6 +64,7 @@ namespace AuthTest.Controllers
 
         [HttpPost]
         [Route("register")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateUser(UserCreationDto user)
         {
 

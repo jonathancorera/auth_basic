@@ -3071,11 +3071,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonat\\source\\repos\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\jonat\\source\\repos\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonat\\source\\repos\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\jonat\\source\\repos\\Auth Basic\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jonat\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -44,6 +44,8 @@ namespace AuthTest.Services
             };
 
             var result = await _userManager.CreateAsync(identityUser, user.Password);
+            await _userManager.AddToRoleAsync(identityUser, "User");
+
 
             return result.Succeeded;
         }
@@ -52,6 +54,7 @@ namespace AuthTest.Services
         public async Task<ApplicationUser> Login(LoginRequestDto user)
         {
             var identityUser = await _userManager.FindByEmailAsync(user.Email);
+
 
             if (identityUser == null)
             {
@@ -72,13 +75,16 @@ namespace AuthTest.Services
 
         }
 
-        public string GenerateTokenString(ApplicationUser user)
+        public  async Task<string> GenerateTokenString(ApplicationUser user)
         {
+
+            string role = await GetUserRole(user);
+
             IEnumerable<Claim> claims = new List<Claim>()
             {
               
                     new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Role, "Admin"),
+                    new Claim(ClaimTypes.Role, role),
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
                 
             };
@@ -97,6 +103,16 @@ namespace AuthTest.Services
             string jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
             return jwt;
+        }
+
+
+        public async Task<string> GetUserRole(ApplicationUser user)
+        {
+            var roles = await _userManager.GetRolesAsync(user);
+
+            string role = roles[0].ToString();
+
+            return role;
         }
 
     }
